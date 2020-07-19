@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+/** HTML Tags **/
+a:hover {
+    color: #fefcfd !important;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12) !important;
+}
+
+footer {
+    position: absolute;
+    bottom:0;
+    background-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    position:absolute;
+    background-color: #1b1b1e;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 400;
+}
+
+/** IDs **/
+#about-me {
+    background-color: #1b1b1e;
+    padding-top: 150px;
+    min-height: 100vh;
+}
+
+#card1 {
+    background: url("/static/img/timeline/1.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+#card2 {
+    background: url("/static/img/timeline/2.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+#card3 {
+    background: url("/static/img/timeline/3.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+#card4 {
+    background: url("/static/img/timeline/4.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+#html-progress {
+    width: 75%;
+}
+
+#css-progress {
+    width: 60%;
+}
+
+#javascript-progress {
+    width: 60%;
+}
+
+#python-progress {
+    width: 75%;
+}
+
+#c-progress {
+    width: 70%;
+}
+
+#ml-progress {
+    width: 40%;
+}
+
+#lightroom-progress {
+    width: 80%;
+}
+
+#financial-progress {
+    width: 95%;
+}
+
+#landing-page {
+    background: url("/static/img/background.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+#logo {
+    z-index: 1031;
+    position: relative;
+    top: 0;
+    left: 1rem;
+    height:150px;
+    width: 150px;
+    background-color: transparent;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 5;
+    background-color: #1b1b1e;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: all 0.6s;
+}
+
+#sidebar-expand {
+    position: fixed;
+    top: 20px;
+    right: 0px;
+    z-index: 6;
+}
+
+#modal-close {
+    position: fixed;
+    top: 20px;
+    right: 0px;
+}
+
+/** Customised classes **/
+.bg-black {
+    background-color: #1b1b1e !important;
+}
+
+.border-grey {
+    border-color: #bfcde0 !important;
+}
+
+.flipcard-btn {
+    background-color: #4bffa5;
+}
+
+.font-courier {
+    font-family: 'Courier Prime', monospace;
+    font-size: 20px;
+}
+
+.font-opensans {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+.font-poppins-light {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+.font-poppins-bold {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+
+.green-color {
+    color: #4bffa5;
+}
+
+.blue-color {
+    color: #007ea7;
+}
+
+.white-color {
+    color: #fefcfd;
+}
+
+.grey-color {
+    color: #bfcde0;
+}
+
+.yellow-color {
+    color: #e0a458;
+}
+
+.modal-body img {
+    max-height: 75%;
+}
+
+.progress-percent {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #4bffa5;
+}
+
+.progress-bar {
+    position: relative;
+    height: 10px;
+    background-color: #bfcde0;
+}
+
+.selected {
+    color: #fefcfd !important;
+    font-weight: 400;
+}
+
+.sidebar-active {
+    -webkit-transform: translateX(0%) !important;
+    transform: translateX(0%) !important;
+}
+
+/** Bootstrap classes **/
+.list-group-item {
+    border-style: none;
+    background-color: transparent;
+    color: #fefcfd !important;
+}
+
+label.active {
+    color: #007ea7 !important;
+}
+
+textarea+label.active {
+    transform: translateY(-20px) scale(0.8) !important;
+}
+
+textarea.form-control {
+    height: 200px !important;
+}
+
+.form-control {
+    color: #fefcfd !important;
+}
+
+.form-control:focus {
+    border-bottom: 1px solid #fefcfd !important;
+    box-shadow: none !important;
+    color: #fefcfd !important;
+}
+
+.btn {
+    background-color: #007ea7;
+}
+/** Animation **/
+.typewriter p {
+  border-right: .15em solid #4bffa5;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.typewriter p:nth-child(1) {
+  width: 250px;
+  -webkit-animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.typewriter p:nth-child(2) {
+  width: 200px;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.typewriter p:nth-child(3) {
+  width: 270px;
+  opacity: 0;
+  -webkit-animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid #4bffa5;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid #4bffa5;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid #4bffa5;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid #4bffa5;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
+/* Animation */
+
+/* Flipcard */
+/* -- Flipcard --*/
+.flipcard-container {
+    height: 300px;
+    width: 100%;
+    position: relative;
+    perspective: 800px;
+}
+
+.flipcard {
+    height: 100%;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.flipcard-front {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flipcard-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flipcard-flip {
+    transform: rotateY(-180deg);
+}
+
+.flipcard-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*--/Flipcard --*/

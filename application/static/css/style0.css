@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700;900&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+    background-color: #101010;
+}
+
+
+/* ID */
+#intro {}
+
+#about-me {
+    background-color: #101010;
+}
+
+/* Classes */
+.border-primary {
+    border-color: #274259 !important;
+}
+
+.bg-black {
+    background-color: #101010;
+}
+
+.button-collapse {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.btn-accent {
+    background-color: #4FCBE9 !important;
+}
+
+.btn-accent:hover {
+    box-shadow: 0 27px 24px 0 rgba(0, 0, 0, 0.2), 0 40px 77px 0 rgba(0, 0, 0, 0.22) !important;
+    background-color: #fff !important;
+}
+
+.font-accent {
+    color: #4bffa5;
+}
+
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+.font-poppins-light {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    line-height: 1.5;
+    letter-spacing: 2px;
+
+}
+
+.font-weight-900 {
+    font-weight: 900;
+}
+
+.font-light {
+    color: #F2F2F2;
+}
+
+.font-primary {
+    color: #101010 !important;
+}
+
+.line-height-1 {
+    line-height: 1 !important;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 4;
+    width: 15rem;
+    height: 100%;
+    padding: 0;
+    padding-bottom: 3.75rem;
+    margin: 0;
+    overflow: hidden;
+    list-style-type: none;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    will-change: transform;
+    transition: all 0.6s;
+}
+
+.sidebar-active {
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.sidebar-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.text-muted:hover {
+    color: #fff !important;
+}
+
+.w-fit-content {
+    width: fit-content;
+}
+
+/* Components */
+
+.chevron-down {
+    position: absolute;
+    bottom: 50px
+}
+
+.chevron-up {
+    position: absolute;
+    top: 50px
+}
+
+/* -- Flipcard --*/
+.flipcard-container {
+    height: 300px;
+    position: relative;
+    perspective: 1000px;
+}
+
+.flipcard {
+    height: 100%;
+    -webkit-transition: .5s;
+    transition: .5s;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.flipcard-front {
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flipcard-back {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.flipcard-flip {
+    transform: rotateY(-180deg);
+}
+
+/*--/Flipcard --*/
+
+.timeline-card-1 {
+    background-image: url("/static/img/timeline/1.jpg");
+    background-size: cover;
+}
+
+.timeline-card-2 {
+    background-image: url("/static/img/timeline/2.jpg");
+    background-size: cover;
+}
+
+.timeline-card-3 {
+    background-image: url("/static/img/timeline/3.jpg");
+    background-size: cover;
+}
+
+.timeline-card-4 {
+    background-image: url("/static/img/timeline/4.jpg");
+    background-size: cover;
+}
+
+
+/* Animation */
+.css-typing p {
+  border-right: .15em solid #4bffa5;
+  font-family: "Courier";
+  font-size: 24px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.css-typing p:nth-child(1) {
+  width: 400px;
+  -webkit-animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type 2s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(2) {
+  width: 250px;
+  opacity: 0;
+  -webkit-animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type2 2s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.css-typing p:nth-child(3) {
+  width: 400px;
+  opacity: 0;
+  -webkit-animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  animation: type3 2s steps(40, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid #4bffa5;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .15em solid #4bffa5;
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid #4bffa5;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .15em solid #4bffa5;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}

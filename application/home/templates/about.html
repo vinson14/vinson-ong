@@ -1,0 +1,274 @@
+{% extends "layout.html" %}
+{% block title %}
+<title>About Me</title>
+{% endblock %}
+
+{% block content %}
+<!-- Start your project here-->
+<header class="fixed-top bg-black d-flex justify-content-between">
+    <!-- Fixed Top Left Corner Logo -->
+    <a href="{{ url_for('home_bp.home') }}" id="logo">
+        <img src="static/img/vinsonong.png" class="img-fluid" alt="Responsive image">
+    </a>
+
+    <!-- Fixed Top Navbar -->
+    <nav class="navbar p-5 d-none d-md-flex justify-content-end shadow-none bg-transparent" id="navbar">
+        <div class="list-group-horizontal list-group font-poppins-light white-color">
+            <a href="{{ url_for('home_bp.home') }}" class="list-group-item">Home</a>
+            <a href="{{ url_for('home_bp.about') }}" class="list-group-item selected">About me</a>
+            <a href="{{ url_for('home_bp.experience') }}" class="list-group-item">Experience</a>
+            <a href="{{ url_for('home_bp.contact') }}" class="list-group-item">Contact Me</a>
+        </div>
+    </nav>
+    <!--/Fixed Top Navbar -->
+
+    <!-- Navbar Expand Button -->
+    <a id="sidebar-expand" class="btn bg-transparent z-depth-0 p-3 d-md-none" onclick="toggleSidebar()" id="sidebar-expand">
+        <i id="sidebar-expand-icon" class="fas fa-bars fa-2x white-color"></i>
+    </a>
+    <!--/Navbar Expand Button -->
+
+    <!-- Full Screen Popup Navbar -->
+    <nav id="sidebar" class="p-5 d-flex align-items-center justify-content-center">
+        <!-- Sidebar Options-->
+        <div class="list-group list-group-flush font-poppins grey-color">
+            <!-- Option 1 -->
+            <a href="{{ url_for('home_bp.home') }}" type="button" class="list-group-item text-center">
+                Home
+            </a>
+            <!-- Option 2 -->
+            <a href="{{ url_for('home_bp.about') }}" type="button" class="list-group-item text-center">
+                About Me
+            </a>
+            <!--/Option 2-->
+
+            <!-- Option 3 -->
+            <a type="button" class="border-white list-group-item text-center">
+                Experience
+            </a>
+            <!--/Option 3-->
+            <!-- Option 4 -->
+            <a href="{{ url_for('home_bp.contact') }}" type="button" class="border-white list-group-item text-center">
+                Contact Me
+            </a>
+            <!--/Option 4-->
+        </div>
+        <!--/Sidebar Options -->
+    </nav>
+    <!--/Full Screen Popup Navbar -->
+</header>
+<main id="about-me" class="pb-5">
+    <!-- About Me Grid Container -->
+    <div class="container border-top border-bottom border-grey p-5">
+
+        <!-- Row -->
+        <div class="row justify-content-center">
+
+            <!-- Title -->
+            <div class="col-12 text-center white-color">
+                <h1 class="font-poppins-light"> About <span class="green-color">Me</span> </h1>
+            </div>
+            <!--/Title -->
+
+            <!-- Image -->
+            <div class="col-md-6 p-3">
+                <img src="/static/img/vinson.jpg" class="img-fluid">
+            </div>
+            <!--/Image -->
+
+            <!-- Write Up -->
+            <div class="col-md-6 white-color p-3 d-flex flex-column justify-content-center">
+                <p class="font-opensans">I am an Associate Financial Consultant with AIA Singapore (SP-HUX) since 2015 with experience in both personal and commercial insurance. I joined in 2015 whilst I was still an
+                    undergraduate in NUS and I have since generated more than $0.5mil in revenue. I utilise the logical thinking imbued in me as a student of engineering to deliver sound finanical
+                    advice to my clients.
+                </p>
+                <p  class="font-opensans mb-0">
+                    Equipping myself with new skills in a variety of areas is something which I constantly do. Web development,
+                    machine learning algorithms, algorithmic trading, photography are some skills which I have taught myself through various platforms. I believe that constantly increasing my arsenal
+                    of skills and applying them in my life is the only way to thrive in today's fast-paced society.
+                </p>
+            </div>
+            <!--/Write Up -->
+
+        </div>
+        <!--/Row -->
+
+    </div>
+    <!--/About Me Grid Container -->
+    <!-- Qualifications Grid Container -->
+    <div class="container border-bottom border-grey py-5 px-2 px-md-5">
+
+        <!-- Qualifications Row -->
+        <div class="row justify-content-center">
+
+            <!-- Header -->
+            <div class="col-12 text-center">
+                <h1 class="font-poppins-light white-color">My <span class="green-color">Qualifications</span> </h1>
+            </div>
+            <!--/Header -->
+            <!-- Educational Column -->
+            <div class="col-12 font-poppins white-color text-center mt-3">
+                <div class="border p-3 border-grey flipcard-content">
+                    <p>Bachelors of Engineering <br> (Chemical Engineering) <br> with Honours (Distinction)</p>
+                    <p class="yellow-color mb-0"> National University of Singapore</p>
+                </div>
+            </div>
+            <!--/Educational Column -->
+            <!-- Professional Column -->
+            <div class="col-md-6 font-poppins white-color text-center mt-3">
+                <div class="border p-3 border-grey flipcard-content">
+                    <p>M5 <br> Rules & Regulations <br> for Financial Advisory </p>
+                    <p class="yellow-color mb-0"> Singapore College of Insurance</p>
+                </div>
+            </div>
+            <!--/Professional Column -->
+            <!-- Professional Column -->
+            <div class="col-md-6 font-poppins white-color text-center mt-3">
+                <div class="border p-3 border-grey flipcard-content">
+                    <p>M9 & M9A <br> Life Insurance <br> And Investment-Linked Policies </p>
+                    <p class="yellow-color mb-0"> Singapore College of Insurance</p>
+                </div>
+            </div>
+            <!--/Professional Column -->
+            <!-- Professional Column -->
+            <div class="col-md-6 font-poppins white-color text-center mt-3">
+                <div class="border p-3 border-grey flipcard-content">
+                    <p>Chartered Financial Consultant <br> Singapore <br> Module 01 </p>
+                    <p class="yellow-color mb-0"> Singapore College of Insurance</p>
+                </div>
+            </div>
+            <!--/Professional Column -->
+            <!-- Professional Column -->
+            <div class="col-md-6 font-poppins white-color text-center mt-3">
+                <div class="border p-3 border-grey flipcard-content">
+                    <p>Certificate in <br> General Insurance <br> (CGI) </p>
+                    <p class="yellow-color mb-0"> Singapore College of Insurance</p>
+                </div>
+            </div>
+            <!--/Professional Column -->
+        </div>
+        <!--/Qualifications Row -->
+
+    </div>
+    <!--/Qualifications Grid Container -->
+    <!-- Skills Grid Container -->
+    <div class="container border-bottom border-grey py-5 px-2 px-md-5 mb-5 mb-md-0">
+
+        <!-- SKills Row -->
+        <div class="row justify-content-center">
+
+            <!-- Header -->
+            <div class="col-12 text-center">
+                <h1 class="font-poppins-light white-color">My <span class="green-color">Skills</span> </h1>
+            </div>
+            <!--/Header -->
+
+            <!-- HTML -->
+            <div class="col-md-6 mt-3">
+                <div class="d-flex justify-content-between align-items-end">
+                    <p class="font-poppins white-color">HTML</p>
+                    <p class="font-poppins-light green-color text-right">75%</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-percent" id="html-progress">
+                    </div>
+                </div>
+            </div>
+            <!--/HTML -->
+            <!-- CSS -->
+            <div class="col-md-6 mt-3">
+                <div class="d-flex justify-content-between align-items-end">
+                    <p class="font-poppins white-color">CSS</p>
+                    <p class="font-poppins-light green-color text-right">60%</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-percent" id="css-progress">
+                    </div>
+                </div>
+            </div>
+            <!--/CSS -->
+            <!-- JavaScript -->
+            <div class="col-md-6 mt-3">
+                <div class="d-flex justify-content-between align-items-end">
+                    <p class="font-poppins white-color">JavaScript</p>
+                    <p class="font-poppins-light green-color text-right">60%</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-percent" id="javascript-progress">
+                    </div>
+                </div>
+            </div>
+            <!--/JavaScript -->
+            <!-- Python/Flask -->
+            <div class="col-md-6 mt-3">
+                <div class="d-flex justify-content-between align-items-end">
+                    <p class="font-poppins white-color">Python/Flask</p>
+                    <p class="font-poppins-light green-color text-right">75%</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-percent" id="python-progress">
+                    </div>
+                </div>
+            </div>
+            <!--/JavaScript -->
+
+            <!-- C -->
+            <div class="col-md-6 mt-3">
+                <div class="d-flex justify-content-between align-items-end">
+                    <p class="font-poppins white-color">C Programming</p>
+                    <p class="font-poppins-light green-color text-right">70%</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-percent" id="c-progress">
+                    </div>
+                </div>
+            </div>
+            <!--/C -->
+
+            <!-- Machine Learning -->
+            <div class="col-md-6 mt-3">
+                <div class="d-flex justify-content-between align-items-end">
+                    <p class="font-poppins white-color">Machine Learning & AI</p>
+                    <p class="font-poppins-light green-color text-right">40%</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-percent" id="ml-progress">
+                    </div>
+                </div>
+            </div>
+            <!--/Machine Learning -->
+
+            <!-- Lightroom -->
+            <div class="col-md-6 mt-3">
+                <div class="d-flex justify-content-between align-items-end">
+                    <p class="font-poppins white-color">Lightroom</p>
+                    <p class="font-poppins-light green-color text-right">80%</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-percent" id="lightroom-progress">
+                    </div>
+                </div>
+            </div>
+            <!--/Lightroom -->
+
+            <!-- Financial Knowledge -->
+            <div class="col-md-6 mt-3">
+                <div class="d-flex justify-content-between align-items-end">
+                    <p class="font-poppins white-color">Financial Advisory</p>
+                    <p class="font-poppins-light green-color text-right">95%</p>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-percent" id="financial-progress">
+                    </div>
+                </div>
+            </div>
+            <!--/Financial Knowledge -->
+
+        </div>
+        <!--/Row -->
+
+    </div>
+    <!--/Skills Grid Container -->
+</main>
+
+{% endblock %}

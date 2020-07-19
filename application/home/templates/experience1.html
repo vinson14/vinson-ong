@@ -1,0 +1,234 @@
+{% extends "layout.html" %}
+{% block title %}
+<title>About Me</title>
+{% endblock %}
+
+{% block content %}
+<!-- Start your project here-->
+<header>
+    <!-- Fixed Top Left Corner Logo -->
+    <div id="logo" class="d-flex flex-column text-right ml-3">
+        <img src="static/img/vinsonong.png" class="img-fluid" alt="Responsive image">
+    </div>
+
+    <!-- Fixed Top Navbar -->
+    <nav class="navbar fixed-top p-5 d-none d-md-flex justify-content-end shadow-none bg-black" id="navbar">
+        <div class="list-group-horizontal list-group font-poppins-light white-color">
+            <a href="{{ url_for('home_bp.home') }}" class="list-group-item">Home</a>
+            <a href="{{ url_for('home_bp.about') }}" class="list-group-item">About me</a>
+            <a href="{{ url_for('home_bp.experience') }}" class="list-group-item selected">Experience</a>
+            <a class="list-group-item">Contact Me</a>
+        </div>
+    </nav>
+    <!--/Fixed Top Navbar -->
+
+    <!-- Navbar Expand Button -->
+    <a id="sidebar-expand" class="btn bg-transparent z-depth-0 p-3 d-md-none" onclick="toggleSidebar()" id="sidebar-expand">
+        <i id="sidebar-expand-icon" class="fas fa-bars fa-2x white-color"></i>
+    </a>
+    <!--/Navbar Expand Button -->
+
+    <!-- Full Screen Popup Navbar -->
+    <nav id="sidebar" class="p-5">
+        <!-- Sidebar Options-->
+        <div class="list-group list-group-flush font-poppins grey-color">
+            <!-- Option 1 -->
+            <a href="{{ url_for('home_bp.home') }}" type="button" class="list-group-item text-center">
+                Home
+            </a>
+            <!-- Option 2 -->
+            <a href="{{ url_for('home_bp.about') }}" type="button" class="list-group-item text-center">
+                About Me
+            </a>
+            <!--/Option 2-->
+
+            <!-- Option 3 -->
+            <a type="button" class="border-white list-group-item text-center">
+                Contact Me
+            </a>
+            <!--/Option 3-->
+
+        </div>
+        <!--/Sidebar Options -->
+    </nav>
+    <!--/Full Screen Popup Navbar -->
+</header>
+<main id="about-me" class="pb-5">
+
+    <!-- Experience Grid Container -->
+    <div class="container border-top border-bottom border-grey py-5 px-2 px-md-5">
+
+        <!-- Row -->
+        <div class="row justify-content-center">
+
+            <!-- Title -->
+            <div class="col-12 text-center white-color">
+                <h1 class="font-poppins-light"> My <span class="green-color">Experience</span> </h1>
+            </div>
+            <!--/Title -->
+            <!-- Column1 -->
+            <div class="col-12 mt-3">
+                <!-- Flipcard -->
+
+                <div class="flipcard-container">
+                    <div class="flipcard card card-image" id="card2">
+                        <!-- Flipcard Front -->
+                        <div class="flipcard-front rgba-black-strong d-flex flex-column justify-content-center">
+                            <div class="font-poppins white-color text-center">
+                                <h3><strong>Financial Consultant</strong></h3>
+                                <h4>AIA Singapore</h4>
+                                <h5>Aug 2015 - Present</h5>
+                                <a class="btn flipcard-btn mt-3" data-card="card2">More Info</a>
+                            </div>
+                        </div>
+                        <!-- Flipcard Front -->
+                        <!-- Flipcard Back -->
+                        <div class="flipcard-back rgba-black-strong d-flex flex-column justify-content-center">
+                            <div class="text-center font-poppins white-color">
+                                <p>Rising Star Award 2015, Million Dollar Club 2019 (Gold) <br><br>
+                                    Designed the personal financial portfolio of over 100 clients <br><br>
+                                    Generated over $0.5mil in revenue <br>
+                                </p>
+                                <a class="btn flipcard-btn mt-3" data-card="card2">Less Info</a>
+                            </div>
+                        </div>
+                        <!--/Flipcard Back -->
+                    </div>
+                </div>
+
+                <!--/Flipcard -->
+            </div>
+            <!--/Column1 -->
+            <!-- Column2 -->
+            <div class="col-12 col-md-8 col-lg-6 mt-3">
+                <!-- Flipcard -->
+
+                <div class="flipcard-container">
+                    <div class="flipcard card card-image " id="card1">
+                        <!-- Flipcard Front -->
+                        <div class="flipcard-front rgba-black-strong d-flex flex-column justify-content-center">
+                            <div class="font-poppins white-color text-center">
+                                <h3><strong>Platoon Commander</strong></h3>
+                                <h4>Alpha Company, 10C4I Battalion</h4>
+                                <h5>Jan 2013 - Nov 2013</h5>
+                                <a class="btn flipcard-btn mt-3" data-card="card1">More Info</a>
+                            </div>
+                        </div>
+                        <!-- Flipcard Front -->
+                        <!-- Flipcard Back -->
+                        <div class="flipcard-back rgba-black-strong d-flex flex-column justify-content-center">
+                            <div class="text-center font-poppins white-color">
+                                <p>Underwent a rigorous course to be trained as a platoon commander for wartime and peacetime missions</p>
+                                <p>Led a team of 20 soldiers to support security forces in various high-key events <br>
+                                    such as the IISS Shangri-la Dialogue 2013 and National Day Parade 2013</p>
+                                <a class="btn flipcard-btn mt-3" data-card="card1">Less Info</a>
+                            </div>
+                        </div>
+                        <!--/Flipcard Back -->
+                    </div>
+                </div>
+
+                <!--/Flipcard -->
+            </div>
+            <!--/Column2 -->
+
+            <!-- Column3-->
+            <div class="col-12 col-md-8 col-lg-6 mt-3">
+                <!-- Flipcard -->
+
+                <div class="flipcard-container">
+                    <div class="flipcard card card-image" id="card4">
+                        <!-- Flipcard Front -->
+                        <div class="flipcard-front rgba-black-strong d-flex flex-column justify-content-center">
+                            <div class="font-poppins white-color text-center">
+                                <h3><strong>IT Intern</strong></h3>
+                                <h4>EMIT, ExxonMobil</h4>
+                                <h5>Jan 2017 - Jul 2017</h5>
+                                <a class="btn flipcard-btn mt-3" data-card="card4">More Info</a>
+                            </div>
+                        </div>
+                        <!-- Flipcard Front -->
+                        <!-- Flipcard Back -->
+                        <div class="flipcard-back rgba-black-strong d-flex flex-column justify-content-center">
+                            <div class="text-center font-poppins white-color">
+                                <p>Developed and designed a website through self-taught knowledge in HTML, CSS, JavaScript & AngularJS <br><br>
+                                    Took charge of various marketing activities to encourage employees to utilize technology to improve workplace efficiency</p>
+                                <a class="btn flipcard-btn mt-3" data-card="card4">Less Info</a>
+                            </div>
+                        </div>
+                        <!--/Flipcard Back -->
+                    </div>
+                </div>
+
+                <!--/Flipcard -->
+            </div>
+            <!--/Column3 -->
+
+        </div>
+        <!--/Row -->
+
+    </div>
+    <!--/Experience Grid Container -->
+    <!-- Lightbox Grid Container -->
+    <div class="container border-bottom border-grey py-5 px-2 px-md-5">
+
+        <!-- Row -->
+        <div class="row justify-content-center">
+
+            <!-- Title -->
+            <div class="col-12 text-center white-color mb-3">
+                <h1 class="font-poppins-light"> My <span class="green-color">Photos</span> </h1>
+            </div>
+            <!--/Title -->
+
+            <!-- Picture -->
+            <div class="col-4 mt-3 d-flex align-items-center">
+                <img src="/static/img/portfolio/1c.jpg" class="img-fluid" data-toggle="modal" data-target="#picture1">
+            </div>
+            <!--/Picture -->
+
+            <!-- Picture -->
+            <div class="col-4 mt-3 d-flex align-items-center">
+                <img src="/static/img/portfolio/2c.jpg" class="img-fluid" data-toggle="modal" data-target="#picture2">
+            </div>
+            <!--/Picture -->
+
+            <!-- Picture -->
+            <div class="col-4 mt-3 d-flex align-items-center">
+                <img src="/static/img/portfolio/3c.jpg" class="img-fluid" data-toggle="modal" data-target="#picture3">
+            </div>
+            <!--/Picture -->
+
+            <!-- Picture -->
+            <div class="col-4 mt-3 d-flex align-items-center">
+                <img src="/static/img/portfolio/4c.jpg" class="img-fluid" data-toggle="modal" data-target="#picture4">
+            </div>
+            <!--/Picture -->
+
+            <!-- Picture -->
+            <div class="col-4 mt-3 d-flex align-items-center">
+                <img src="/static/img/portfolio/5c.jpg" class="img-fluid" data-toggle="modal" data-target="#picture5">
+            </div>
+            <!--/Picture -->
+
+            <!-- Picture -->
+            <div class="col-4 mt-3 d-flex align-items-center">
+                <img src="/static/img/portfolio/6c.jpg" class="img-fluid" data-toggle="modal" data-target="#picture6">
+            </div>
+            <!--/Picture -->
+
+            <!-- Picture -->
+            <div class="col-12 mt-3 d-flex align-items-center">
+                <img src="/static/img/portfolio/7a.jpg" class="img-fluid" data-toggle="modal" data-target="#picture7">
+            </div>
+            <!--/Picture -->
+
+        </div>
+        <!--/Row -->
+
+    </div>
+    <!--/Lightbox Grid Container -->
+
+</main>
+
+{% endblock %}
