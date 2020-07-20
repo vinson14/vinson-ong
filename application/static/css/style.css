@@ -171,6 +171,11 @@ h1, h2, h3, h4, h5 {
 
 .font-courier {
     font-family: 'Courier Prime', monospace;
+    font-size: 16px;
+}
+
+.font-courier-lg {
+    font-family: 'Courier Prime', monospace;
     font-size: 20px;
 }
 
