@@ -26,6 +26,7 @@
     <link href="{{ url_for('home_bp.static', filename='css/mdb.min.css') }}" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="{{ url_for('home_bp.static', filename='css/style.css') + "?v=1.1" }}" rel="stylesheet">
+    {% block pagestyles %}{% endblock %}
 </head>
 
 <body>

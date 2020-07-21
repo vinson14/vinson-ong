@@ -1,0 +1,52 @@
+<header class="fixed-top bg-transparent d-flex justify-content-between">
+    <!-- Fixed Top Left Corner Logo -->
+    <a href="{{ url_for('home_bp.home') }}" id="logo">
+        <img src="static/img/vinsonong.png" class="img-fluid" alt="Responsive image">
+    </a>
+
+    <!-- Fixed Top Navbar -->
+    <nav class="navbar p-5 d-none d-md-flex justify-content-end shadow-none bg-transparent" id="navbar">
+        <div class="list-group-horizontal list-group font-poppins-light white-color">
+            <a href="{{ url_for('home_bp.home') }}" class="list-group-item selected">Home</a>
+            <a href="{{ url_for('home_bp.about') }}" class="list-group-item">About me</a>
+            <a href="{{ url_for('home_bp.experience') }}" class="list-group-item">Experience</a>
+            <a href="{{ url_for('home_bp.contact') }}" class="list-group-item">Contact Me</a>
+        </div>
+    </nav>
+    <!--/Fixed Top Navbar -->
+
+    <!-- Navbar Expand Button -->
+    <a id="sidebar-expand" class="btn bg-transparent z-depth-0 p-3 d-md-none" onclick="toggleSidebar()" id="sidebar-expand">
+        <i id="sidebar-expand-icon" class="fas fa-bars fa-2x white-color"></i>
+    </a>
+    <!--/Navbar Expand Button -->
+
+    <!-- Full Screen Popup Navbar -->
+    <nav id="sidebar" class="p-5 d-flex align-items-center justify-content-center">
+        <!-- Sidebar Options-->
+        <div class="list-group list-group-flush font-poppins grey-color">
+            <!-- Option 1 -->
+            <a href="{{ url_for('home_bp.home') }}" class="list-group-item text-center">
+                Home
+            </a>
+            <!-- Option 2 -->
+            <a href="{{ url_for('home_bp.about') }}" class="list-group-item text-center">
+                About Me
+            </a>
+            <!--/Option 2-->
+
+            <!-- Option 3 -->
+            <a href="{{ url_for('home_bp.experience') }}" class="border-white list-group-item text-center">
+                Experience
+            </a>
+            <!--/Option 3-->
+            <!-- Option 4 -->
+            <a href="{{ url_for('home_bp.contact') }}" class="border-white list-group-item text-center">
+                Contact Me
+            </a>
+            <!--/Option 4-->
+        </div>
+        <!--/Sidebar Options -->
+    </nav>
+    <!--/Full Screen Popup Navbar -->
+</header>

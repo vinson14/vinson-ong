@@ -26,7 +26,13 @@ def about():
 @home_bp.route('/experience', methods=['GET'])
 def experience():
     """Experience"""
-    return render_template('experience.html')
+
+    photos = [
+        'img/Portfolio/' + str(number) + "c.jpg"
+        for number in range(1, 7)
+    ]
+
+    return render_template('experience.html', photos=photos)
 
 @home_bp.route('/contact', methods=['GET', 'POST'])
 def contact():
