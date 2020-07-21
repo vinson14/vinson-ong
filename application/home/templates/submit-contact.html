@@ -76,64 +76,9 @@
             </div>
             <!--/Contact details -->
 
-            <!-- Form -->
-            <div class="col-12">
-                <form method="POST" action="{{ url_for('home_bp.contact') }}" class="font-poppins">
-                    {{ form.csrf_token }}
-
-                    <div class="row justify-content-center">
-
-                        <!-- Name -->
-                        <div class="col-md-6">
-                            <fieldset class="md-form">
-                                {{ form.name(class="form-control", maxlength="64") }}
-                                {{ form.name.label }}
-                            </fieldset>
-                        </div>
-                        <!--/Name -->
-
-                        <!-- Mobile No. -->
-                        <div class="col-md-6">
-                            <fieldset class="md-form">
-                                {{ form.mobile(class="form-control"), maxlength="15" }}
-                                {{ form.mobile.label }}
-                            </fieldset>
-                        </div>
-                        <!--/Mobile No. -->
-
-                        <!--Email -->
-                        <div class="col-md-6">
-                            <fieldset class="md-form">
-                                {{ form.email(class="form-control", type="email", maxlength="100") }}
-                                {{ form.email.label }}
-                            </fieldset>
-                        </div>
-                        <!--/Mobile No. -->
-
-                        <!-- Subject -->
-                        <div class="col-md-6">
-                            <fieldset class="md-form">
-                                {{ form.subject(class="form-control") }}
-                                {{ form.subject.label }}
-                            </fieldset>
-                        </div>
-                        <!--/Subject -->
-
-                        <!-- Subject -->
-                        <div class="col-md-6">
-                            <fieldset class="md-form">
-                                {{ form.message(class="form-control") }}
-                                {{ form.message.label }}
-                            </fieldset>
-                        </div>
-                        <!--/Subject -->
-                        <div class="col-md-12 d-flex justify-content-center">
-                            {{ form.submit(class="btn flipcard-btn mt-3 white-color") }}
-                        </div>
-                    </div>
-                </form>
+            <div class="col-12 mt-3 text-center">
+                <p class="font-poppins white-color">I will be in touch with you shortly. For urgent matters, please contact me through my mobile number.</p>
             </div>
-            <!--/Form -->
 
         </div>
 

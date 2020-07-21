@@ -1,6 +1,7 @@
 from flask import Blueprint, render_template
 from flask import current_app as app
 from ..forms import ContactForm
+from ..models import db, Contact
 
 
 # Blueprint Configuration
@@ -31,4 +32,15 @@ def experience():
 def contact():
     """Contact"""
     form = ContactForm()
+    if form.validate_on_submit():
+        contact = Contact(
+            name=form.name.data,
+            mobile=form.mobile.data,
+            email=form.email.data,
+            subject=form.subject.data,
+            message=form.message.data
+        )
+        db.session.add(contact)
+        db.session.commit()
+        return render_template('submit-contact.html')
     return render_template('contact.html', form=form)
